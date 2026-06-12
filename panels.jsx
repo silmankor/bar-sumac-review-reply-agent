@@ -393,7 +393,9 @@ function BulkReplyModal({ reviews, onClose, onSave }) {
 /* ---------------- Review chat sheet — right drawer, conversation view ---------------- */
 function ReviewChatSheet({ review, onClose, onSend }) {
   const alreadyReplied = review.status === "sent" || review.status === "auto";
-  const initial = alreadyReplied ? "" : (review.reply || "");
+  const needsGeneratedReply = review.status === "unanswered";
+  const suggestedReply = review.reply || "Thank you for sharing your experience with us. We appreciate your feedback and have passed it along to the team.";
+  const initial = alreadyReplied || needsGeneratedReply ? "" : suggestedReply;
   const [draft, setDraft] = useState(initial);
   const [regen, setRegen] = useState(false);
   const [fresh, setFresh] = useState(false);
@@ -419,9 +421,10 @@ function ReviewChatSheet({ review, onClose, onSend }) {
     setFresh(false);
     setRegen(true);
     setTimeout(() => {
+      setDraft(suggestedReply);
       setRegen(false);
       setFresh(true);
-      setTimeout(() => setFresh(false), revealDuration(draft));
+      setTimeout(() => setFresh(false), revealDuration(suggestedReply));
     }, 1000);
   }
   function insertField(name) {
