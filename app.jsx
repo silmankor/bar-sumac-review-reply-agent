@@ -81,6 +81,30 @@ function Hero({ pending, onReview, onEditRules }) {
   );
 }
 
+function AgentTag({ name }) {
+  const dotRef = useRef(null);
+  useEffect(() => {
+    if (!dotRef.current || !window.lottie) return;
+    const anim = window.lottie.loadAnimation({
+      container: dotRef.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "assets/blue-gradient.json",
+    });
+    return () => anim.destroy();
+  }, []);
+
+  return (
+    <span className="agent-tag">
+      <span className="agent-tag-dot" aria-hidden="true">
+        <span className="agent-tag-motion" ref={dotRef}></span>
+      </span>
+      {name}
+    </span>
+  );
+}
+
 /* ---------------- Stats — 3 plain ---------------- */
 function StatCards({ pending }) {
   const items = [
@@ -575,7 +599,7 @@ function App() {
           <div className="page-head">
             <div>
               <h1 className="page-title">Review Reply Agent</h1>
-              <div className="page-sub"><span className="agent-tag"><span className="agent-tag-dot"></span>Jonathan</span> drafts, checks, and sends review replies based on your rules.</div>
+              <div className="page-sub"><AgentTag name="Jonathan" /> drafts, checks, and sends review replies based on your rules.</div>
             </div>
           </div>
 
