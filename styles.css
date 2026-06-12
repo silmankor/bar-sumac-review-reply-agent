@@ -101,7 +101,7 @@ body{
 
 .ptabs{display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);margin-top:-12px}
 .ptabs + .fade-in{margin-top:-32px}
-.ptabs + .overview-stack{margin-top:-61px}
+.ptabs + .overview-stack{margin-top:-53px}
 .ptab{position:relative;padding:13px 0;font-family:inherit;font-size:14.5px;font-weight:500;color:var(--muted);background:transparent;border:0;cursor:pointer;transition:color .12s}
 .ptab:hover{color:var(--ink-soft)}
 .ptab.active{color:var(--ink)}
