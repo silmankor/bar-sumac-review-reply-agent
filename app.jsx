@@ -350,13 +350,6 @@ function HistoryView({ onOpen, onToast, initialFilter = "all" }) {
 
   return (
     <div className={"section" + (bulkMode ? " bulk-mode" : "")}>
-      <div className="section-h">
-        <div>
-          <h2>Reply history</h2>
-          <div className="sub" style={{ marginTop: 4 }}>Every reply your agent has sent, automated, or left for you.</div>
-        </div>
-      </div>
-
       <label className="hsearch">
         <Icon.search />
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search history…" />
