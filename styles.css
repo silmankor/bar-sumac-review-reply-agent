@@ -17,6 +17,7 @@
   --green:     var(--success-600);
   --green-dot: var(--success-500);
   --reply-font:"Inter Display","Inter",ui-sans-serif,system-ui,sans-serif;
+  --field-focus-inset:inset 0 0 0 1px var(--gray-950);
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -433,14 +434,13 @@ body{
 .bulk-reply-output-title .ai-layer__spark{background:var(--gray-950);width:13px;height:13px}
 .bulk-reply-output-head .btn-ghost{color:var(--neutral-600)}
 .bulk-reply-output-head .btn-ghost:hover{background:var(--neutral-100);color:var(--gray-950)}
-.bulk-reply-editor{position:relative;min-height:132px;border:1px solid var(--stroke);border-radius:12px;background:#fff;box-sizing:border-box;transition:border-color .12s}
-.bulk-reply-editor:focus-within{border-width:2px;border-color:var(--gray-950)}
+.bulk-reply-editor{position:relative;min-height:132px;border:1px solid var(--stroke);border-radius:12px;background:#fff;box-sizing:border-box;transition:border-color .12s,box-shadow .12s}
+.bulk-reply-editor:focus-within{border-color:var(--gray-950);box-shadow:var(--field-focus-inset)}
 .bulk-ai-area{display:block;width:100%;box-sizing:border-box;border:0;background:transparent;border-radius:12px;padding:15px 16px;font-family:var(--reply-font);font-size:14px;line-height:22px;font-weight:400;letter-spacing:0;color:var(--gray-900);resize:vertical;min-height:132px;outline:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .bulk-ai-area::-webkit-resizer{background:transparent}
 .bulk-ai-area.revealing{color:transparent;caret-color:transparent}
-.bulk-reply-editor:focus-within .bulk-ai-area{padding:14px 15px}
 .bulk-reply-editor .resize-grip{position:absolute;right:8px;bottom:8px;width:9px;height:9px;color:var(--gray-300);pointer-events:none;z-index:2}
-.bulk-reply-editor:focus-within .resize-grip{right:7px;bottom:7px;color:var(--gray-400)}
+.bulk-reply-editor:focus-within .resize-grip{color:var(--gray-400)}
 .bulk-ai-overlay{position:absolute;inset:0;box-sizing:border-box;border-radius:12px;padding:15px 16px;font-family:var(--reply-font);font-size:14px;line-height:22px;font-weight:400;letter-spacing:0;color:var(--gray-900);overflow:hidden;pointer-events:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .bulk-reply-skel{min-height:132px;padding:16px;gap:9px}
 .bulk-modal-foot{padding:18px 32px 24px;border-top:1px solid var(--line-soft)}
@@ -471,17 +471,16 @@ body{
 .ai-layer__spark{width:14px;height:14px;flex-shrink:0;background:var(--blue-600);-webkit-mask:url("assets/ai-sparkles.svg") center/contain no-repeat;mask:url("assets/ai-sparkles.svg") center/contain no-repeat}
 .ai-layer__sub{margin-top:6px;font-family:"Inter Display",sans-serif;font-size:14px;line-height:20px;font-weight:500;letter-spacing:-.006em;color:var(--blue-300)}
 /* white card — owns outer edges; blank canvas slot inside */
-.ai-layer__card{position:relative;z-index:1;box-sizing:border-box;background:var(--white);border:1px solid var(--stroke);border-radius:16px;min-height:170px;transition:border-color .12s}
+.ai-layer__card{position:relative;z-index:1;box-sizing:border-box;background:var(--white);border:1px solid var(--stroke);border-radius:16px;min-height:170px;transition:border-color .12s,box-shadow .12s}
 .ai-layer__area{display:block;width:100%;box-sizing:border-box;border:0;background:transparent;border-radius:16px;padding:18px 18px 20px;font-family:var(--reply-font);font-size:15px;line-height:23px;font-weight:400;letter-spacing:0;color:var(--gray-900);resize:vertical;min-height:170px;outline:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .ai-layer__area.revealing{color:transparent;caret-color:transparent}
 .ai-layer__overlay{position:absolute;inset:0;box-sizing:border-box;border-radius:16px;padding:18px 18px 20px;font-family:var(--reply-font);font-size:15px;line-height:23px;font-weight:400;letter-spacing:0;color:var(--gray-900);overflow:hidden;pointer-events:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .ai-layer__area::placeholder{color:var(--gray-400)}
 .ai-layer__area::-webkit-resizer{background:transparent}
 .ai-layer .resize-grip{position:absolute;right:9px;bottom:9px;width:9px;height:9px;color:var(--gray-300);pointer-events:none;z-index:2}
-/* DS focus — 2px gray-950 border, no glow (matches inputs.html) */
-.ai-layer__card:focus-within{border-width:2px;border-color:var(--gray-950)}
-.ai-layer__card:focus-within .ai-layer__area{padding:17px 17px 19px}
-.ai-layer__card:focus-within .resize-grip{right:8px;bottom:8px;color:var(--gray-400)}
+/* DS focus — inner 2px stroke effect without changing layout */
+.ai-layer__card:focus-within{border-color:var(--gray-950);box-shadow:var(--field-focus-inset)}
+.ai-layer__card:focus-within .resize-grip{color:var(--gray-400)}
 
 /* regenerating — DS shimmer skeleton (white sweep), blue-hued + bigger.
    Height matches the resolved textarea (card min-height 170) so there's no jump. */
@@ -544,10 +543,10 @@ body{
 /* composer */
 .chat-composer{border-top:1px solid var(--line-soft);padding:16px 24px 20px;background:var(--surface);position:relative;z-index:5;overflow:visible}
 .chat-input-wrap{position:relative}
-.chat-input{width:100%;height:118px;box-sizing:border-box;border:1px solid var(--stroke);border-radius:12px;padding:13px 15px;font-family:var(--reply-font);font-size:14px;line-height:21px;font-weight:400;letter-spacing:0;color:var(--gray-900);background:#fff;resize:none;outline:none;transition:border-color .12s;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+.chat-input{width:100%;height:118px;box-sizing:border-box;border:1px solid var(--stroke);border-radius:12px;padding:13px 15px;font-family:var(--reply-font);font-size:14px;line-height:21px;font-weight:400;letter-spacing:0;color:var(--gray-900);background:#fff;resize:none;outline:none;transition:border-color .12s,box-shadow .12s;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .chat-input.revealing{color:transparent;caret-color:transparent}
 .chat-input::placeholder{color:var(--gray-400)}
-.chat-input:focus{border-width:2px;border-color:var(--gray-950);padding:12px 14px}
+.chat-input:focus{border-color:var(--gray-950);box-shadow:var(--field-focus-inset)}
 .chat-reply-skel{display:flex;flex-direction:column;gap:9px;height:118px;box-sizing:border-box;border:1px solid var(--stroke);border-radius:12px;background:#fff;padding:16px 15px}
 .chat-reply-skel .reply-skel__line{height:14px}
 .chat-reveal-overlay{position:absolute;inset:0;box-sizing:border-box;border:1px solid transparent;border-radius:12px;padding:13px 15px;font-family:var(--reply-font);font-size:14px;line-height:21px;font-weight:400;letter-spacing:0;color:var(--gray-900);overflow:hidden;pointer-events:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
@@ -644,10 +643,10 @@ body{
 .tone-d{display:block;font-size:13px;color:var(--muted)}
 
 /* textarea — matches DS Form Inputs spec */
-.set-area{width:100%;box-sizing:border-box;font-family:"Inter Display","Inter",ui-sans-serif,system-ui,sans-serif;font-size:14px;line-height:20px;padding:13px 16px;border:1px solid var(--stroke);border-radius:12px;background:#fff;color:var(--gray-900);outline:none;transition:border-color .12s;resize:vertical;min-height:340px;display:block}
+.set-area{width:100%;box-sizing:border-box;font-family:"Inter Display","Inter",ui-sans-serif,system-ui,sans-serif;font-size:14px;line-height:20px;padding:13px 16px;border:1px solid var(--stroke);border-radius:12px;background:#fff;color:var(--gray-900);outline:none;transition:border-color .12s,box-shadow .12s;resize:vertical;min-height:340px;display:block}
 .set-area::placeholder{color:var(--gray-400)}
 .set-area:hover{border-color:var(--stroke-strong)}
-.set-area:focus{border-width:2px;border-color:var(--gray-950);padding:12px 15px}
+.set-area:focus{border-color:var(--gray-950);box-shadow:var(--field-focus-inset)}
 .set-area::-webkit-resizer{background:transparent}
 .textarea-wrap{position:relative;display:block}
 .textarea-wrap .resize-grip{position:absolute;right:8px;bottom:8px;width:9px;height:9px;color:var(--gray-300);pointer-events:none}
