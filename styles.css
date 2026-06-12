@@ -97,8 +97,8 @@ body{
 .page{padding:44px 44px 96px;display:flex;flex-direction:column;gap:56px;max-width:1040px;margin:0 auto;width:100%}
 .page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .page-title{font-size:28px;font-weight:600;letter-spacing:-.025em;line-height:34px;margin:0;color:var(--ink)}
-.page-sub{color:var(--muted);font-size:15px;line-height:23px;margin-top:7px;max-width:56ch}
-.agent-tag{display:inline-flex;align-items:center;gap:7px;padding:0;border-radius:0;background:transparent;color:var(--blue-600);font-size:13px;font-weight:600;line-height:18px;vertical-align:middle;margin-right:4px}
+.page-sub{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:15px;line-height:23px;margin-top:7px;max-width:56ch}
+.agent-tag{display:inline-flex;align-items:center;gap:6px;padding:0;border-radius:0;background:transparent;color:var(--blue-600);font-size:15px;font-weight:500;line-height:23px;flex-shrink:0}
 .agent-tag-dot{position:relative;width:15px;height:15px;border-radius:9999px;background:var(--blue-600) url("assets/agent-dot.svg") center/cover no-repeat;box-shadow:0 0 10px rgba(47,91,255,.28);overflow:hidden;flex-shrink:0}
 .agent-tag-motion{position:absolute;inset:0;display:block;opacity:1;mix-blend-mode:normal;pointer-events:none}
 .agent-tag-motion svg{width:100%;height:100%;display:block}

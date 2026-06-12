@@ -592,7 +592,7 @@ function App() {
           <div className="page-head">
             <div>
               <h1 className="page-title">Review Reply Agent</h1>
-              <div className="page-sub"><AgentTag name="Jonathan" /> drafts, checks, and sends review replies based on your rules.</div>
+              <div className="page-sub"><AgentTag name="Jonathan" /><span>drafts, checks, and sends review replies based on your rules.</span></div>
             </div>
           </div>
 
