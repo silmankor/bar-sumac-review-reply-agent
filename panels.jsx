@@ -365,6 +365,10 @@ function BulkReplyModal({ reviews, onClose, onSave }) {
                             <WordReveal text={drafts[review.id]} seed={review.id + "-bulk-" + versions[review.id]} />
                           </div>
                         )}
+                        <svg className="resize-grip" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" aria-hidden="true">
+                          <path d="M9 4 4 9" />
+                          <path d="M9 8 8 9" />
+                        </svg>
                       </React.Fragment>
                     )}
                   </div>

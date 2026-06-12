@@ -436,8 +436,11 @@ body{
 .bulk-reply-editor{position:relative;min-height:132px;border:1px solid var(--stroke);border-radius:12px;background:#fff;box-sizing:border-box;transition:border-color .12s}
 .bulk-reply-editor:focus-within{border-width:2px;border-color:var(--gray-950)}
 .bulk-ai-area{display:block;width:100%;box-sizing:border-box;border:0;background:transparent;border-radius:12px;padding:15px 16px;font-family:var(--reply-font);font-size:14px;line-height:22px;font-weight:400;letter-spacing:0;color:var(--gray-900);resize:vertical;min-height:132px;outline:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+.bulk-ai-area::-webkit-resizer{background:transparent}
 .bulk-ai-area.revealing{color:transparent;caret-color:transparent}
 .bulk-reply-editor:focus-within .bulk-ai-area{padding:14px 15px}
+.bulk-reply-editor .resize-grip{position:absolute;right:8px;bottom:8px;width:9px;height:9px;color:var(--gray-300);pointer-events:none;z-index:2}
+.bulk-reply-editor:focus-within .resize-grip{right:7px;bottom:7px;color:var(--gray-400)}
 .bulk-ai-overlay{position:absolute;inset:0;box-sizing:border-box;border-radius:12px;padding:15px 16px;font-family:var(--reply-font);font-size:14px;line-height:22px;font-weight:400;letter-spacing:0;color:var(--gray-900);overflow:hidden;pointer-events:none;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .bulk-reply-skel{min-height:132px;padding:16px;gap:9px}
 .bulk-modal-foot{padding:18px 32px 24px;border-top:1px solid var(--line-soft)}
