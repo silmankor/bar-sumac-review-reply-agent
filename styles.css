@@ -116,6 +116,7 @@ body{
 .section-h .sub{font-size:13.5px;color:var(--muted)}
 .section-h .link{font-size:13.5px;color:var(--navy);font-weight:500;cursor:pointer}
 .section-h .link:hover{opacity:.75}
+.overview-stack{display:flex;flex-direction:column;gap:56px}
 
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px}
 
@@ -166,6 +167,7 @@ body{
    STATS — framed band, inset dividers (matched to QR file)
    ========================================================= */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.overview-stack > .stats:first-child{border-top:0}
 .stat{position:relative;background:transparent;padding:32px;display:flex;flex-direction:column;gap:10px}
 .stat:first-child{padding-left:0}
 .stat:not(:first-child)::before{content:"";position:absolute;left:0;top:32px;bottom:32px;width:1px;background:var(--line)}

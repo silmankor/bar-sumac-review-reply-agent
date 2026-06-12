@@ -588,9 +588,9 @@ function App() {
           </div>
 
           {tab === "overview" && (
-            <div className="fade-in" style={{ display: "flex", flexDirection: "column", gap: 56 }}>
-              <Hero pending={pendingItems.length} onReview={reviewPending} onEditRules={() => setDrawer(true)} />
+            <div className="fade-in overview-stack">
               <StatCards pending={pendingItems.length} />
+              <Hero pending={pendingItems.length} onReview={reviewPending} onEditRules={() => setDrawer(true)} />
               <RecentReviews onOpen={openHistory} onAllReviews={openAllReviews} />
             </div>
           )}
