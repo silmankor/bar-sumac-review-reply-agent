@@ -285,11 +285,11 @@ body{
 .hbar .htools{justify-self:end}
 
 .hlist{display:flex;flex-direction:column}
-.hrow{display:flex;flex-direction:column;gap:21px;padding:28px 24px;margin:0;border-bottom:1px solid var(--line-soft);cursor:pointer;transition:background .1s}
+.hrow{display:flex;flex-direction:column;gap:21px;padding:28px 16px;margin:0;border-bottom:1px solid var(--line-soft);cursor:pointer;transition:background .1s}
 .hrow:first-child{border-top:1px solid var(--line-soft)}
 .bulk-mode .hrow:first-child{border-top:0}
 .hrow:hover{background:var(--neutral-50)}
-.hrow.selectable{position:relative;padding-left:64px}
+.hrow.selectable{position:relative;padding-left:56px}
 .hrow.disabled-select{cursor:default}
 .hrow.disabled-select .hrow-head,.hrow.disabled-select .hrow-content{opacity:.52}
 .hrow.selected{background:var(--neutral-50)}
