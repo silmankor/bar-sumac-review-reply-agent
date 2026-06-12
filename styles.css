@@ -432,7 +432,7 @@ body{
 .bulk-review-id strong{font-size:14.5px;line-height:18px;font-weight:600;color:var(--ink)}
 .bulk-review-meta{display:flex;align-items:center;gap:10px;min-height:13px}
 .bulk-review-meta span{font-size:12.5px;line-height:13px;font-weight:500;color:var(--muted)}
-.bulk-review-main p{margin:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:14px;line-height:21px;color:var(--neutral-700)}
+.bulk-review-main p{margin:0;font-size:14px;line-height:21px;color:var(--neutral-700)}
 .bulk-reply-output{min-width:0;display:flex;flex-direction:column;gap:10px}
 .bulk-reply-output-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .bulk-reply-output-title{display:flex;align-items:center;gap:8px;font-family:"Inter Display",sans-serif;font-size:13.5px;line-height:19px;font-weight:600;letter-spacing:-.006em;color:var(--gray-950)}
