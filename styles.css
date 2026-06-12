@@ -427,10 +427,11 @@ body{
 .bulk-reply-card:last-child{border-bottom:0}
 .bulk-review-context{display:flex;align-items:flex-start;gap:12px}
 .bulk-review-avatar{width:34px;height:34px;border-radius:9999px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
-.bulk-review-main{min-width:0;display:flex;flex-direction:column;gap:8px}
-.bulk-review-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.bulk-review-top strong{font-size:14.5px;line-height:18px;font-weight:600;color:var(--ink)}
-.bulk-review-top span{font-size:12.5px;font-weight:500;color:var(--muted)}
+.bulk-review-main{min-width:0;display:flex;flex-direction:column;gap:12px;padding-top:1px}
+.bulk-review-id{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0;padding-bottom:1px}
+.bulk-review-id strong{font-size:14.5px;line-height:18px;font-weight:600;color:var(--ink)}
+.bulk-review-meta{display:flex;align-items:center;gap:10px;min-height:13px}
+.bulk-review-meta span{font-size:12.5px;line-height:13px;font-weight:500;color:var(--muted)}
 .bulk-review-main p{margin:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:14px;line-height:21px;color:var(--neutral-700)}
 .bulk-reply-output{min-width:0;display:flex;flex-direction:column;gap:10px}
 .bulk-reply-output-head{display:flex;align-items:center;justify-content:space-between;gap:16px}

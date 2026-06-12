@@ -323,10 +323,12 @@ function BulkReplyModal({ reviews, onClose, onSave }) {
                     {review.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
                   </div>
                   <div className="bulk-review-main">
-                    <div className="bulk-review-top">
+                    <div className="bulk-review-id">
                       <strong>{review.name}</strong>
-                      <Stars rating={review.rating} size={12} />
-                      <span>{review.platform}</span>
+                      <div className="bulk-review-meta">
+                        <Stars rating={review.rating} size={12} />
+                        <span>{review.platform}</span>
+                      </div>
                     </div>
                     <p>{review.review}</p>
                   </div>
