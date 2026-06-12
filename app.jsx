@@ -231,7 +231,7 @@ function ReviewRows({ rows, onOpen, emptyLabel = "No reviews match your search."
             </div>
             <div className="hrow-content">
               <div className="hcopy hreview">{h.review}</div>
-              {h.reply && h.reply !== "—" && (
+              {h.status !== "unanswered" && h.reply && h.reply !== "—" && (
                 <div className="hreply">
                   <img className="hreply-icon" src="assets/reply-curve-down-right.svg" alt="" aria-hidden="true" />
                   <span className="hcopy hreply-text">{h.reply}</span>
