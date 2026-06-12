@@ -431,7 +431,6 @@ body{
 .bulk-reply-output-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .bulk-reply-output-title{display:flex;align-items:center;gap:8px;font-family:"Inter Display",sans-serif;font-size:13.5px;line-height:19px;font-weight:600;letter-spacing:-.006em;color:var(--gray-950)}
 .bulk-reply-output-title .ai-layer__spark{background:var(--gray-950);width:13px;height:13px}
-.bulk-reply-output-sub{margin-top:2px;font-size:12.5px;line-height:18px;font-weight:500;color:var(--muted)}
 .bulk-reply-output-head .btn-ghost{color:var(--neutral-600)}
 .bulk-reply-output-head .btn-ghost:hover{background:var(--neutral-100);color:var(--gray-950)}
 .bulk-reply-editor{position:relative;min-height:132px;border:1px solid var(--stroke);border-radius:12px;background:#fff;box-sizing:border-box;transition:border-color .12s}

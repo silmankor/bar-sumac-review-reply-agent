@@ -336,7 +336,6 @@ function BulkReplyModal({ reviews, onClose, onSave }) {
                   <div className="bulk-reply-output-head">
                     <div>
                       <div className="bulk-reply-output-title"><span className="ai-layer__spark"></span>Draft reply</div>
-                      <div className="bulk-reply-output-sub">{writing ? "Writing in your house style..." : "Ready to review and edit."}</div>
                     </div>
                     <button className="btn btn-ghost btn-sm" onClick={() => regenerate(review)} disabled={writing}>
                       {writing ? <Icon.refresh className="spin" /> : <Icon.refresh />}{writing ? "Writing" : "Regenerate"}
