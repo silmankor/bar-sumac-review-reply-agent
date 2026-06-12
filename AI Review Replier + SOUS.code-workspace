@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "name": "AI Review Replier",
+      "path": "."
+    },
+    {
+      "name": "SOUS Design System Jun",
+      "path": "../SOUS Design System • '26 (1)"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.pnpm-store": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ritwickdey.LiveServer",
+      "ecmel.vscode-html-css",
+      "stylelint.vscode-stylelint",
+      "streetsidesoftware.code-spell-checker"
+    ]
+  }
+}

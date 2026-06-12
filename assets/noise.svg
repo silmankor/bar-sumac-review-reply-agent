@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300">
+  <filter id="n" x="0" y="0">
+    <feTurbulence type="fractalNoise" baseFrequency=".6" stitchTiles="stitch" numOctaves="4" result="turbulence" />
+    <feTurbulence type="fractalNoise" baseFrequency=".2" stitchTiles="stitch" numOctaves="5" result="turbulence2" />
+
+    <feBlend in="turbulence2" in2="turbulence" mode="saturation" result="blend" />
+
+    <feColorMatrix type="saturate" in="blend" values="2" />
+  </filter>
+
+  <rect width="300" height="300" fill="#333" />
+  <rect width="300" height="300" filter="url(#n)" />
+</svg>
