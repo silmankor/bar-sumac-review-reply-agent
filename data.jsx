@@ -186,7 +186,7 @@ const HISTORY = [
 ];
 
 const STATUS_META = {
-  unanswered: { label: "Outstanding",    tone: "neutral" },
+  unanswered: { label: "Awaiting reply", tone: "neutral" },
   sent:       { label: "Replied",        tone: "info" },
   auto:       { label: "Replied by agent", tone: "ai" },
   failed:     { label: "Failed",         tone: "error" },
@@ -194,7 +194,7 @@ const STATUS_META = {
 
 const HISTORY_FILTERS = [
   { key: "all", label: "All" },
-  { key: "unanswered", label: "Outstanding" },
+  { key: "unanswered", label: "Awaiting reply" },
   { key: "sent", label: "Replied" },
   { key: "auto", label: "Replied by agent" },
   { key: "failed", label: "Failed" },
