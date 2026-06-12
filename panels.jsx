@@ -238,7 +238,6 @@ function ReviewModal({ review, onClose, onResolve }) {
 
 /* ---------------- Bulk generated replies modal ---------------- */
 function BulkReplyModal({ reviews, onClose, onSave }) {
-  const gradientRef = useRef(null);
   const makeReply = (review, version = 0) => {
     const base = review.reply && review.reply !== "—"
       ? review.reply
@@ -297,21 +296,8 @@ function BulkReplyModal({ reviews, onClose, onSave }) {
 
   const writingCount = reviews.filter((r) => phases[r.id] === "writing").length;
 
-  useEffect(() => {
-    if (!gradientRef.current || !window.lottie) return;
-    const anim = window.lottie.loadAnimation({
-      container: gradientRef.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "assets/blue-gradient.json",
-    });
-    return () => anim.destroy();
-  }, []);
-
   return (
     <ScrimWrap side="center" onClose={onClose}>
-      <div className="bulk-gradient-lottie" ref={gradientRef} aria-hidden="true"></div>
       <div className="modal bulk-reply-modal" role="dialog" aria-modal="true" aria-label="Approve drafted replies">
         <div className="modal-head bulk-modal-head">
           <div>

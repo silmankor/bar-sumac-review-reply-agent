@@ -1,5 +1,5 @@
 /* Review Reply Agent — main app (calm restyle) */
-const { useState, useEffect, useMemo } = React;
+const { useState, useEffect, useMemo, useRef } = React;
 
 /* ---------------- Sidebar ---------------- */
 function Sidebar({ onSwitch }) {
@@ -53,9 +53,22 @@ function Sidebar({ onSwitch }) {
 
 /* ---------------- Hero ---------------- */
 function Hero({ pending, onReview, onEditRules }) {
+  const gradientRef = useRef(null);
+  useEffect(() => {
+    if (!gradientRef.current || !window.lottie) return;
+    const anim = window.lottie.loadAnimation({
+      container: gradientRef.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "assets/blue-gradient.json",
+    });
+    return () => anim.destroy();
+  }, []);
+
   return (
     <div className="hero">
-      <video className="hero-video" src="assets/hero-gradient-backdrop.mp4" autoPlay muted loop playsInline aria-hidden="true"></video>
+      <div className="hero-lottie" ref={gradientRef} aria-hidden="true"></div>
       <div className="hero-l">
         <h1 className="hero-title">10 reviews handled for you</h1>
         <p className="hero-sub">I sent safe replies automatically and prepared 4 drafts that are ready for your review.</p>
