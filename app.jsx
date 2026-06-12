@@ -222,7 +222,7 @@ function ReviewRows({ rows, onOpen, emptyLabel = "No reviews match your search."
               </div>
               <div className="hright">
                 <div className={"hcell hstatus st-" + h.status}>
-                  {h.status === "auto" ? <img className="st-ai-icon" src="assets/spark-status.svg" alt="" aria-hidden="true" /> : <span className="sd"></span>}
+                  {h.status === "auto" ? <span className="st-ai-icon" aria-hidden="true"></span> : <span className="sd"></span>}
                   <span className="hstatus-label">{meta.label}</span>
                 </div>
                 <div className="hcell hcell-src" title={h.platform}><PlatformMark platform={h.platform} size={18} /></div>

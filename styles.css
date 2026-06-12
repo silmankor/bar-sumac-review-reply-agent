@@ -312,7 +312,7 @@ body{
 .hstatus .sd{width:6px;height:6px;border-radius:9999px;background:var(--gray-400);flex-shrink:0}
 .hstatus.st-sent .sd{background:var(--success-500)}
 .hstatus.st-failed .sd{background:var(--error-500)}
-.st-ai-icon{width:7px;height:7px;display:block;flex-shrink:0}
+.st-ai-icon{width:7px;height:7px;display:block;flex-shrink:0;background:var(--blue-600);-webkit-mask:url("assets/spark-status.svg") center/contain no-repeat;mask:url("assets/spark-status.svg") center/contain no-repeat}
 @keyframes statusReflect{0%,72%{opacity:0;transform:translateX(-150%) skewX(-18deg)}80%{opacity:.94}89%{opacity:.72}96%{opacity:.22}100%{opacity:0;transform:translateX(260%) skewX(-18deg)}}
 @media (prefers-reduced-motion:reduce){.hstatus.st-auto::before{animation:none;display:none}}
 .hcell-date{width:88px;justify-content:flex-end;font-size:13px;color:var(--faint);font-variant-numeric:tabular-nums}
