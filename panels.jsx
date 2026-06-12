@@ -90,7 +90,7 @@ function SettingsForm({ settings, setSettings }) {
         <div className="set-row-l"><h4>When reviews come in</h4><p>Choose what the agent does for each rating.</p></div>
         <div className="set-row-r">
           <div className="rules">
-            {[1, 2, 3, 4, 5].map((r) => (
+            {[5, 4, 3, 2, 1].map((r) => (
               <div className="rule-row" key={r}>
                 <div className="rule-left">
                   <span className="rule-stars"><Stars rating={r} size={13} /></span>
