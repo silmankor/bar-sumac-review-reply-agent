@@ -90,7 +90,7 @@ function AgentTag({ name }) {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: "assets/blue-gradient.json",
+      path: "assets/agent-dot-motion.json",
     });
     return () => anim.destroy();
   }, []);
