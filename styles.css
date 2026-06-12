@@ -98,6 +98,8 @@ body{
 .page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .page-title{font-size:28px;font-weight:600;letter-spacing:-.025em;line-height:34px;margin:0;color:var(--ink)}
 .page-sub{color:var(--muted);font-size:15px;line-height:23px;margin-top:7px;max-width:56ch}
+.agent-tag{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px 0 6px;border-radius:9999px;background:var(--blue-50);color:var(--blue-600);font-weight:600;line-height:1;vertical-align:-4px;margin-right:4px}
+.agent-tag-dot{width:13px;height:13px;border-radius:9999px;background:radial-gradient(circle at 50% 52%,var(--blue-700) 0 30%,var(--blue-500) 58%,rgba(47,91,255,.18) 100%);box-shadow:0 0 10px rgba(47,91,255,.32);flex-shrink:0}
 .page-head .actions{display:flex;gap:10px;flex-shrink:0}
 
 .ptabs{display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);margin-top:-12px}
